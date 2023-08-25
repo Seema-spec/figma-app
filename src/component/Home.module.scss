@@ -93,17 +93,28 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .wrapper {
- margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 160px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
  img{
     width: 48%;
     margin-right: 10px;
  }
 }
 .wrapper2 {
-    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 160px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
     img{
        width: 32%;
        margin-right: 10px;
