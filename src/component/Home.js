@@ -15,6 +15,9 @@ import banner3 from '../assets/banner2.png';
 import vector6 from '../assets/Vector6.png';
 import vector7 from '../assets/Vector7.png';
 import group5 from '../assets/Group 243.png';
+import group24 from '../assets/Group 68.png';
+import group25 from '../assets/Group 69.png';
+import group26 from '../assets/Group 72.png';
 import  
 {head_img,
 category,
@@ -25,7 +28,6 @@ Product,
 group} from './common'
 
 function Home() {
-    
     return (
         <div className={styles.home}>
             <div className={styles.top_header}>
@@ -65,7 +67,7 @@ function Home() {
                             <img src={image5}/>
                         </div>
                     </div>
-                    {trending?.map((trend) => (
+                    {trending?.map((trend,index1) => (
                     <div key={trend.title}>
                         <div className={styles.category_title}>
                             <img src={Line} alt='' />
@@ -76,7 +78,21 @@ function Home() {
                             <div className={styles.item_card}>
                                 {trend.items.map((data, index) => (
                                     <div key={index} className={styles.item}>
-                                        <img src={data.img} alt='' />
+                                        <img className={`${
+                                        index1 === 0 && (index === 0 || index === 7)
+                                            ? styles.item_img
+                                            : ''
+                                        }`}
+                                        src={data.img}
+                                        alt=''
+                                        />
+                                        { index1 === 0 && (index === 0 || index === 7)
+                                            ? <div className={styles.header_right}>
+                                            <img className={styles.item_cart_img} src={group24} />
+                                            <img className={styles.item_cart_img} src={group25} />
+                                            <img className={styles.item_cart_img} src={group26} />
+                                            </div>
+                                            : ''}
                                         <div className={styles.card_text}>
                                             <p>{data?.text1}</p>
                                             <p>{data?.text2}</p>

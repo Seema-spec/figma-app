@@ -151,6 +151,17 @@ html,body{
     flex-direction: column;
     width: 253px;
 }
+.item_img{
+    -webkit-filter: blur(8px);
+    background-image: url('../assets/Group 68.png');
+}
+.item_cart_img{
+    height: 6vh;
+    padding: 10px;
+    margin-top: -408px;
+    margin-right: 20px;
+    z-index: 1;
+}
 .product_item{
     margin-right: 18px;
     margin-bottom: 15px;
